@@ -1,0 +1,46 @@
+{
+  "name": "aqai_sythlinx_qa_framework",
+  "version": "1.0.0",
+  "description": "Playwright + playwright-bdd (Gherkin) + TypeScript automation framework (ParaBank demo)",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf reports",
+    "pretest": "npm run clean",
+    "test": "playwright test",
+    "test:headed": "npm test -- --headed",
+    "test:parallel": "cross-env PARALLEL=3 npm test",
+    "test:smoke": "npm test -- --grep @smoke",
+    "test:regression": "npm test -- --grep @regression",
+    "test:login": "npm test -- --grep @login",
+    "test:register": "npm test -- --grep @register",
+    "test:dev": "cross-env TEST_ENV=dev npm test",
+    "test:qa": "cross-env TEST_ENV=qa npm test",
+    "test:uat": "cross-env TEST_ENV=uat npm test",
+    "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
+    "allure:open": "allure open reports/allure-report",
+    "report": "npm run allure:generate && npm run allure:open",
+    "typecheck": "tsc"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "typescript",
+    "allure"
+  ],
+  "author": "Madan Gowda",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "allure-commandline": "2.46.1",
+    "allure-playwright": "3.14.0",
+    "cross-env": "10.1.0",
+    "dotenv": "18.0.9",
+    "playwright-bdd": "9.2.1",
+    "rimraf": "6.1.4",
+    "typescript": "5.9.3",
+    "winston": "3.19.0"
+  }
+}

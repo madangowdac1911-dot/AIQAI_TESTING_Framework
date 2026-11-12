@@ -1,0 +1,18 @@
+{
+  "newCustomer": {
+    "firstName": "Madan",
+    "lastName": "Gowda",
+    "street": "Electronic City",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "zipCode": "560100",
+    "phone": "9876543200",
+    "ssn": "123456",
+    "usernamePrefix": "MadanC",
+    "password": "Madan@gowda!"
+  },
+  "invalidLogins": {
+    "wrongPassword": { "username": "MadangowdaC", "password": "WrongPass123" },
+    "unknownUser": { "username": "no_such_user_xyz", "password": "Whatever1!" }
+  }
+}
